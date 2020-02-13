@@ -5,11 +5,13 @@ import { getData } from "../api";
 import "./star-wars-characters.css";
 
 export default function StarWarsCharacters() {
+
   const [url, setUrl] = useState("https://swapi.co/api/people");
   const [previous, setPrevious] = useState();
   const [next, setNext] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [characters, setCharacters] = useState([]);
+
   useEffect(() => {
     setIsLoading(true);
     const getCharacters = async () => {
